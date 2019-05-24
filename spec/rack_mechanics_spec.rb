@@ -23,7 +23,7 @@ describe "Shopping Cart Rack App" do
     it 'Will add an item that is in the @@items list' do
       Application.class_variable_set(:@@items, ["Figs","Oranges"])
       get '/add?item=Figs'
-      expect(last_response.body).to include("added Figs")
+      expect(last_response.body).to include("Figs")
       expect(Application.class_variable_get(:@@cart)).to include("Figs")
     end
 
