@@ -35,7 +35,7 @@ elsif req.path.match(/add/)
   else
       resp.write "Path Not Found"
     end
-    resp.finish
+      resp.finish
   end
 
   def handle_search(search_term)
